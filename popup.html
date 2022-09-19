@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./styles/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/font.css">
+    <link rel="stylesheet" href="./styles/page.css">
+    <title>Air</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-light bg-light">
+            <a id="page-title" class="navbar-brand" style="color: wheat;"></a>
+            <button id="clear-all" class="btn ml-auto">
+                <i class="material-icons">clear_all</i>
+            </button>
+        </nav>
+        <div class="sidebar">
+            <div class="list-group flex-md-row" id="tabs" role="tablist">
+                <a class="list-group-item list-group-item-action" id="cw-tab" data-toggle="list" href="#cw-content"
+                    role="tab" aria-controls="messages">
+                    <span><img src="images/wallet.png"></span>
+                </a>
+                <a class="list-group-item list-group-item-action" id="cw-setting" data-toggle="list"
+                    href="#setting-content" role="tab" aria-controls="setting">
+                    <span><img src="images/setting.png"></span>
+                </a>
+                <a class="list-group-item list-group-item-action" id="tk-tab" data-toggle="list" href="#tk-content"
+                    role="tab" aria-controls="home">
+                    <span><img src="images/question.png"></span>
+                </a>
+            </div>
+            <div class="list-group flex-md-row" id="tabs2" style="margin-top: 330px;">
+                <a class="list-group-item" style="pointer-events: none;" href="javascript:void(0)">
+                    <span style="background: none;"><img id="current-version" src="images/free.png"></span>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade" id="tk-content" role="tabpanel" aria-labelledby="tk-tab">
+                    <div id="tk-current"></div>
+                    <h2 class="tk-activity" id="app-infor">Gleam AutoTune v1.0 - Free (Limited)</h2>
+                    <h3 class="created-by">Created by: NAN Std.</h3>
+                    <h3 class="email">Email: nanstd2016@gmail.com</h3>
+                    <div id="pricing-secion">
+                        <label>Pricing</label>
+                        <span class="badge badge-danger" style="margin-left: 5px;font-size: 13px;">Free: Limited</span>
+                        <span class="badge badge-primary" style="margin-left: 5px;font-size: 13px;">Full function: $100 / 1 month</span>
+                        <span class="badge badge-success" style="margin-left: 5px;font-size: 13px;">Full function: $400 / 6 months</span>
+                        <span class="badge badge-warning" style="margin-left: 5px;font-size: 13px;">Full function: $600 / 1 year</span>
+                    </div>
+                    <label style="padding-top: 10px">Send fund to this wallet address and email me your transaction hash</label>
+                    <label style="color:gold;font-weight: bold;">0xd9bf1073b055be368287061a33c6f6a58595b51a - BUSD/USDC/USDT</label>
+                    <div id="upgrade-secion" style="padding-top: 15px;">
+                        <form>
+                            <div class="form-group">
+                                <textarea class="form-control" id="activation-code"
+                                    placeholder="input activation code here"></textarea>
+                            </div>
+                        </form>
+                        <button id="submit-activation-code" type="button" class="btn btn-primary"
+                            style="float: right;width: 80px;">Upgrade</button>
+                        <span id="invalid-code" class="badge badge-danger"
+                            style="float: right; margin-top: 8px; margin-right: 10px;font-size: 12px;display: none;">Invalid
+                            Code</span>
+                        <div id="activation-code-loading" class="spinner-border text-success" role="status"
+                            style="float: right;margin-right: 12px;display: none;">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="cw-content" role="tabpanel" aria-labelledby="cw-tab"
+                    style="padding-top: 15px;">
+                    <form>
+                        <div class="form-group">
+                            <label for="address-wallet">Wallet Address</label>
+                            <input type="text" class="form-control" id="address-wallet" placeholder="0x...">
+                        </div>
+                        <div class="form-group custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="twitter-support" checked="true" disabled>
+                            <label class="custom-control-label" for="twitter-support" style="padding-top: 2px;">Twitter Support (Follow, Like, Retweet)</label>
+                        </div>
+                        <div class="form-group custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="discord-support" disabled>
+                            <label class="custom-control-label" for="discord-support" style="padding-top: 2px;">Discord Support</label>
+                        </div>
+                        <div class="form-group custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="facebook-support" disabled>
+                            <label class="custom-control-label" for="facebook-support" style="padding-top: 2px;">Facebook Support</label>
+                        </div>
+                        <div class="form-group custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="youtube-support" disabled>
+                            <label class="custom-control-label" for="youtube-support" style="padding-top: 2px;">Youtube Support (View, Like, Subscribe)</label>
+                        </div>
+                        <div class="form-group custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="medium-support" disabled>
+                            <label class="custom-control-label" for="medium-support" style="padding-top: 2px;">Medium Support</label>
+                        </div>
+                        <div class="form-group custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="telegram-support" disabled>
+                            <label class="custom-control-label" for="telegram-support" style="padding-top: 2px;">Telegram Support (Join, Subscribe)</label>
+                        </div>
+                        <div class="form-group" id="group-telegram-account" style="display: none;">
+                            <label for="telegram-account">Telegram Account</label>
+                            <input type="text" class="form-control" id="telegram-account" placeholder="@username"
+                                style="width: 50%;">
+                        </div>
+                    </form>
+                    <button id="save-account-information" type="button" class="btn btn-primary"
+                        style="float: right;width: 80px;">Save</button>
+                    <div id="cw-loading" class="spinner-border text-success" role="status"
+                        style="float: right;margin-right: 12px;display: none;">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="setting-content" role="tabpanel" aria-labelledby="setting-tab" style="padding-top: 15px;">
+                    <form>
+                        <div class="form-group">
+                            <label for="speedValue">Speed</label>
+                            <span id="speedText" class="badge badge-success"
+                            style="margin-left: 5px;font-size: 12px;">Normal</span>
+                            <input type="range" class="custom-range" min="1" max="3" step="1" id="speedValue" disabled>
+                        </div>
+                        <div class="form-group custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="auto-run" checked="true" disabled>
+                            <label class="custom-control-label" for="auto-run" style="padding-top: 2px;">Auto run when open Gleam</label>
+                        </div>
+                        <div class="form-group custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="close-subwindows" disabled>
+                            <label class="custom-control-label" for="close-subwindows" style="padding-top: 2px;">Close sub windows after finish task</label>
+                        </div>
+                        <div class="form-group custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="close-windows" disabled>
+                            <label class="custom-control-label" for="close-windows" style="padding-top: 2px;">Close chrome browser after run</label>
+                        </div>
+                    </form>
+                    <button id="save-setting" type="button" class="btn btn-primary"
+                        style="float: right;width: 80px;" disabled>Save</button>
+                    <div id="setting-loading" class="spinner-border text-success" role="status"
+                        style="float: right;margin-right: 12px;display: none;">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/lib/bootstrap.min.js"></script>
+    <script type="module" src="./scripts/popup.js"></script>
+</body>
+
+</html>
